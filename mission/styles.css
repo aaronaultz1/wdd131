@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 70px 0 30px 0;
+    justify-content: center;
+}
+header {
+    border-bottom: 1px solid lightgrey;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 5;
+}
+
+h2 {
+    font-size: 18px;
+    color: #006EB6;
+    letter-spacing: 6px;
+}
+
+.content {
+    max-width: 600px;
+    border: 1px solid lightgrey;
+    padding: 100px 200px;
+    
+}
+
+li {
+    padding-bottom: 20px;
+}
+
+#logo {
+    display: block;
+    margin: 50px auto 0 auto;
+    max-width: 150px;
+    justify-content: center;
+}
