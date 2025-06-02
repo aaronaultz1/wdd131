@@ -55,7 +55,28 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+
+
+.date {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    color: rgb(48, 48, 48);
+}
+
+.title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    color: rgb(0, 95, 95);
+
+}
+
+.blog-articles{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
 }
 
@@ -66,11 +87,6 @@ body {
     font-family: "Arial, Helvetica, sans-serif";
 }
 
-.date {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 30px;
-    color: rgb(48, 48, 48);
-}
 .middle-column {
     grid-column: 2;
     border-right: 2px solid rgb(179, 179, 179);
@@ -78,12 +94,6 @@ body {
     padding: 0px 10px 0px 10px;
     font-size: 30px;
     font-family: "Arial, Helvetica, sans-serif";
-}
-.title {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 40px;
-    color: rgb(0, 95, 95);
-
 }
 
 .read-more {

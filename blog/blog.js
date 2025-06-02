@@ -9,7 +9,7 @@ const articles = [
 		imgAlt: 'Book cover for Septimus Heap 1',
 		ages: '10-14',
 		genre: 'Fantasy',
-		stars: '****'
+		stars: '⭐⭐⭐⭐'
 	},
 	{
 		id: 2,
@@ -24,4 +24,34 @@ const articles = [
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
 	}
-]
+];
+
+const container = document.querySelector('#articlesContainer');
+
+articles.forEach(function(item){
+	
+	const book = document.createElement("article");
+
+	book.setAttribute("class", "book");
+
+
+		let html = `
+		<div class="left-column">
+			<h1 class="date">${item.date}</h1>
+			<p class="ages">${item.ages}</p>
+			<p class="genre">${item.genre}</p>
+			<p class="stars">${item.stars}</p>
+		</div>
+		<div class="middle-column">
+			<h1 class="title">${item.title}</h1>
+			<img src="${item.imgSrc}" alt="${item.imgAlt}">
+			<p class="description">
+				${item.description}
+				<button class="read-more">Read More...</button>
+			</p>
+		</div>	
+		`;
+
+	book.innerHTML = html;
+	container.appendChild(book);
+});
