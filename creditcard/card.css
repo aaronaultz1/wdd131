@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+body {
+    background-color: rgb(88, 41, 26);
+    font-family: lato, 'helvetica-light';
+    position: relative;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+#amount {
+    font-size: 12px;
+}
+
+#card-back {
+    top: 40px;
+    right: 0;
+    z-index: -2;
+}
+
+#card-btn {
+  background-color: rgba(151, 158, 54, 0.8);
+  color: #ffffff;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  width: 150px;
+  border-radius: 8px;
+  height: 42px;
+  font-size: 12px;
+  font-family: lato, 'helvetica-light', 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#card-btn:hover {
+  background-color: rgba(98, 102, 35, 0.8);
+}
+
+

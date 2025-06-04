@@ -26,32 +26,37 @@ const articles = [
 	}
 ];
 
-const container = document.querySelector('#articlesContainer');
+const container = document.querySelector('.grid-container');
 
 articles.forEach(function(item){
 	
-	const book = document.createElement("article");
+	const leftColumn = document.createElement("div");
 
-	book.setAttribute("class", "book");
+	leftColumn.setAttribute("class", "left-column");
 
 
-		let html = `
-		<div class="left-column">
+		leftColumn.innerHTML = `
 			<h1 class="date">${item.date}</h1>
 			<p class="ages">${item.ages}</p>
 			<p class="genre">${item.genre}</p>
 			<p class="stars">${item.stars}</p>
-		</div>
-		<div class="middle-column">
+		`;
+		
+	const middleColumn = document.createElement("div");
+
+	middleColumn.setAttribute("class", "middle-column");	
+		
+		middleColumn.innerHTML = `
 			<h1 class="title">${item.title}</h1>
 			<img src="${item.imgSrc}" alt="${item.imgAlt}">
 			<p class="description">
 				${item.description}
 				<button class="read-more">Read More...</button>
 			</p>
-		</div>	
 		`;
-
-	book.innerHTML = html;
-	container.appendChild(book);
+	// container.insertAdjacentElement("afterBegin", leftColumn);
+	// container.insertAdjacentElement("afterBegin", middleColumn);
+	container.appendChild(leftColumn);
+	container.appendChild(middleColumn);
 });
+	

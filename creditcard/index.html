@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aaron Aultz">
+    <meta name="description" content="credit card exercise">
+    <title>Credit Card Form</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    
+    <div id="form-container">
+        <div id="image-container">
+            <p id="total">TOTAL: $199</p>
+            <img id="card-image">
+        </div>
+        
+        <div id = "card-front">
+            <form id="creditCardForm" action="completed.html">
+            <label for="cardNumber">CARD NUMBER</label>
+            <input id="cardNumber" type="number" name="cardNumber" placeholder= "1234 5678 9101 1020" length="16" required>
+            <label for="cardHolder">CARD HOLDER</label>
+            <input id="cardNumber" type="text" name="cardHolder" placeholder="John Doe" required>
+            <label for="expiration">EXPIRATION</label>
+            <input id="expirationMonth" type="text" name="expirationMonth" aria-labelledby="expiration" placeholder="MM" length= "2" required>
+            <input id="expirationYear" type="text" name="expirationYear" aria-labelledby="expiration" placeholder="YY" length="2" required>
+        </div>
+        
+        <div id="card-back">
+            <div id="card-stripe"></div>
+            <label for="key">CVC/CVV</label>
+            <input id="key" type="number" name="key" placeholder="xxx" required>
+        </div>
+        <button type="button" id="card-btn">Submit</button>
+    </div>
+
+    
+
+
+
+
+    <script src="card.js"></script>
+</body>
+</html>
