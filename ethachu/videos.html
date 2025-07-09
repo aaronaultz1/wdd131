@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aaron Aultz">
+    <meta name="description" content="Ethachu Movie Series">
+    <title>Ethachu</title>
+    <link rel="stylesheet" href="ethachu.css">
+    <link rel="icon" type="image/png" href="images/official-logo.png">
+
+</head>
+<body>
+    <header>
+        <img class="main-logo" src="images/official-logo.png" alt="Ethachu Official Logo">
+        
+        <nav  class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="credits.html">Credits</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="video-layout">
+    <aside class="video-sidebar">
+      <button class="video-btn active" onclick="loadYouTube(this, 'https://www.youtube.com/embed/b-JsvNyzLLQ?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK')">The Legend of Ethachu</button>
+      <button class="video-btn" onclick="loadYouTube(this, 'https://www.youtube.com/embed/HsoZXlOvv8U?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK')">The Return of Ethachu</button>
+      <button class="video-btn" onclick="loadYouTube(this, 'https://www.youtube.com/embed/YZDYQLui7L0?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK')">The End of Ethachu (Part 1) - The Invincible Man</button>
+      <button class="video-btn" onclick="loadYouTube(this, 'https://www.youtube.com/embed/qlMKj3wl_EQ?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK')">The End of Ethachu (Part 2) - The Secret Descendant</button>
+      <button class="video-btn" onclick="loadYouTube(this, 'https://www.youtube.com/embed/-OD-82xYRy4?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK')">The End of Ethachu (Part 3) - The Final Strike</button>
+    </aside>
+
+    <section class="video-player">
+      <iframe
+        id="yt-player"
+        width="100%"
+        height="600"
+        src="https://www.youtube.com/embed/b-JsvNyzLLQ?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </section>
+  </main>
+
+    <footer>
+        <img class="main-logo" src="images/official-logo.png" alt="Ethachu Official Logo">
+        <nav  class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="credits.html">Credits</a></li>
+            </ul>
+        </nav>
+        <address>&copy; 2025 Aaron Aultz</address>
+    </footer>
+
+
+    <script src = "ethachu.js"></script>
+</body>
+</html>

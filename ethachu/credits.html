@@ -23,17 +23,19 @@
         </nav>
     </header>
     <main>
-        <div class="container">
-            <div class="hero-slides">
-                <h1 class="main-title">Ethachu: The Series</h1>
-                <img id="hero-image" src="images/ethachu_actionshot1.png" alt="Hero image">
-                <div id="thumbnail-bar" class="thumbnail-bar"></div>
-            </div>
-            <div class="description">
-                <h2>What is Ethachu</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In Ethachu’s world, mystery and adventure collide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In Ethachu’s world, mystery and adventure collide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In Ethachu’s world, mystery and adventure collide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In Ethachu’s world, mystery and adventure collide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In Ethachu’s world, mystery and adventure collide. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In Ethachu’s world, mystery and adventure collide.</p>
-            </div>
+        <h1>Ethachu Series Credits</h1>
+
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search by character or actor name..."
+            oninput="filterCredits()"
+        />
+
+        <div class="cards-container" id="cards-container">
+            <!-- Cards inserted by JavaScript -->
         </div>
+
     </main>
     <footer>
         <img class="main-logo" src="images/official-logo.png" alt="Ethachu Official Logo">
@@ -46,6 +48,17 @@
         </nav>
         <address>&copy; 2025 Aaron Aultz</address>
     </footer>
+
+    <div id="credit-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <h2 id="modal-name"></h2>
+            <p id="modal-roles"></p>
+            <p id="modal-videos"></p>
+            <p id="modal-extended"></p>
+        </div>
+    </div>
 
     <script src = "ethachu.js"></script>
 </body>
