@@ -7,7 +7,10 @@ const heroImages = [
   "images/ethachu_actionshot5.png",
   "images/ethachu_actionshot6.png",
   "images/ethachu_actionshot7.png",
-  "images/ethachu_actionshot8.png"
+  "images/ethachu_actionshot8.png",
+  "images/EthachuFire.JPEG",
+  "images/EthachuHideout1.JPEG",
+  "images/EthachuLeader.JPEG"
 ];
 
 let currentImageIndex = 0;
@@ -15,35 +18,36 @@ const heroImg = document.getElementById('hero-image');
 const thumbnailBar = document.getElementById('thumbnail-bar');
 
 // Create thumbnails dynamically
-heroImages.forEach((src, index) => {
-  const thumb = document.createElement('img');
-  thumb.src = src;
-  thumb.classList.add('thumbnail');
-  if (index === 0) thumb.classList.add('active');
+if (thumbnailBar && heroImg) {
+  heroImages.forEach((src, index) => {
+    const thumb = document.createElement('img');
+    thumb.src = src;
+    thumb.classList.add('thumbnail');
+    if (index === 0) thumb.classList.add('active');
 
-  thumb.addEventListener('click', () => {
-    currentImageIndex = index;
-    updateHeroImage();
-    resetAutoCycle();
+    thumb.addEventListener('click', () => {
+      currentImageIndex = index;
+      updateHeroImage();
+      resetAutoCycle();
+    });
+
+    thumbnailBar.appendChild(thumb);
   });
 
-  thumbnailBar.appendChild(thumb);
-});
+  function updateHeroImage() {
+    heroImg.style.opacity = 0;
 
-function updateHeroImage() {
-  heroImg.style.opacity = 0;
+    setTimeout(() => {
+      heroImg.src = heroImages[currentImageIndex];
+      heroImg.style.opacity = 1;
 
-  setTimeout(() => {
-    heroImg.src = heroImages[currentImageIndex];
-    heroImg.style.opacity = 1;
-
-    // Update thumbnail highlights
-    document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
-      thumb.classList.toggle('active', i === currentImageIndex);
-    });
-  }, 300);
+      // Update thumbnail highlights
+      document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+        thumb.classList.toggle('active', i === currentImageIndex);
+      });
+    }, 300);
+  }
 }
-
 // Auto cycle
 let autoCycle = setInterval(nextImage, 5000);
 
@@ -58,18 +62,72 @@ function resetAutoCycle() {
 }
 
 // Youtube Player
-function loadYouTube(button, url) {
-    const iframe = document.getElementById('yt-player');
-    iframe.src = url;
+if (document.getElementById('yt-player')) {
+  const videoData = [
+    {
+      url: "https://www.youtube.com/embed/b-JsvNyzLLQ?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK",
+      summary: "A kid named Ethan becomes a superhero of electric proportions!",
+      date: "Oct 28, 2013"
+    },
+    {
+      url: "https://www.youtube.com/embed/HsoZXlOvv8U?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK",
+      summary: "Ethachu struggles to control his powers.",
+      date: "May 6, 2014"
+    },
+    {
+      url: "https://www.youtube.com/embed/YZDYQLui7L0?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK",
+      summary: "When Ethachu faces a huge new threat, will he have to sacrifice himself for the greater good?",
+      date: "May 10, 2015"
+    },
+    {
+      url: "https://www.youtube.com/embed/qlMKj3wl_EQ?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK",
+      summary: "One year after Ethachu's first encounter with the Invincible Man, the search continues for him while a new enemy arises in the second chapter of the epic conclusion to the Ethachu trilogy!",
+      date: "Oct 29, 2016"
+    },
+    {
+      url: "https://www.youtube.com/embed/-OD-82xYRy4?list=PLi7kiIksxYaZoc3uFoP_FAXsLft2stWzK",
+      summary: "Torn from his allies, his powers, and his own life, Ethan must make a daring escape to defy death itself and defeat the Invincible Boy once and for all.",
+      date: "June 19, 2020"
+    }
+  ];
 
-    // Remove active from all buttons
-    document.querySelectorAll('.video-btn').forEach(btn =>
+
+  function loadYouTube(button, url) {
+  const iframe = document.getElementById('yt-player');
+  iframe.src = url;
+
+  const summaryDiv = document.getElementById('video-summary');
+  const video = videoData.find(v => v.url === url);
+  
+  if (video) {
+    summaryDiv.innerHTML = `
+      <div class="video-date"><strong>Release Date:</strong> ${video.date}</div>
+      <div class="video-description">${video.summary}</div>
+    `;
+  } else {
+    summaryDiv.textContent = "No summary available.";
+  }
+
+  document.querySelectorAll('.video-btn').forEach(btn =>
     btn.classList.remove('active')
-    );
-
-    // Add active class to clicked button
-    button.classList.add('active');
+  );
+  button.classList.add('active');
 }
+
+
+
+  // Load initial summary on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const summaryDiv = document.getElementById('video-summary');
+    const firstVideo = videoData[0];
+    if (firstVideo) {
+      summaryDiv.innerHTML = `
+        <div class="video-date"><strong>Release Date:</strong> ${firstVideo.date}</div>
+        <div class="video-description">${firstVideo.summary}</div>
+      `;
+    }
+  });
+};
 
 
 
