@@ -136,42 +136,42 @@ if (document.getElementById('yt-player')) {
 const credits = [
     {
     name: "Alex O'Dell",
-    roles: "Director, Producer, Film Lead, Writer, Actor: Alex",
+    roles: "Director, Producer, Film Lead, Writer, Actor: Alex, Camera Operator",
     summary: "Visionary behind the Ethachu series' direction and production.",
-    extended: "Ethachu is a curious and fearless young spirit, often found in the wilds seeking ancient truths.",
-    videos: ["Part 1", "Part 2", "Part 5"],
+    extended: "The original idea of Ethachu originated from Alex O'Dell, a 6th grader at the time, who wanted to create an unlikely hero from a curious boy. The name 'Ethachu' was inspiried by the mix between his friend's name, 'Ethan' and the famous Pokémon 'Pikachu'. ",
+    videos: ["ALL FILMS"],
     image: "images/alex.png"
     },
     {
     name: "Ethan Hall",
-    roles: "Actor: Ethan / Ethachu",
-    summary: "Crafted the compelling storylines and dialogues for the series.",
-    extended: "Ethachu is a curious and fearless young spirit, often found in the wilds seeking ancient truths.",
-    videos: ["Part 1", "Part 2", "Part 5"],
+    roles: "Actor: Ethan / Ethachu, Camera Operator",
+    summary: "Portrays the main character of Ethachu.",
+    extended: "Ethan Hall, the actor who portrayed Ethachu, brought a fearless and innocent personality to the film, making the character truly memorable and heroic.",
+    videos: ["ALL FILMS"],
     image: "images/ethan.png"
     },
     {
     name: "Joseph Spivey",
     roles: "Actor: The Invincible Man",
-    summary: "Lends her voice to Lina, Ethachu’s loyal friend and companion.",
-    extended: "Ethachu is a curious and fearless young spirit, often found in the wilds seeking ancient truths.",
-    videos: ["Part 1", "Part 2", "Part 5"],
+    summary: "Portrays one of the main antagonists, The Invincible Man.",
+    extended: "Joseph Spivey brings a menacing presence to the role of The Invincible Man, challenging Ethachu at every turn.",
+    videos: ["The End of Ethachu - Part 1"],
     image: "images/joey.png"
     },
     {
     name: "Aaron Aultz",
-    roles: "Actor: Leader, Film Assistant",
-    summary: "Portrays the main character Ethachu, a young adventurer.",
-    extended: "Ethachu is a curious and fearless young spirit, often found in the wilds seeking ancient truths.",
-    videos: ["Part 1", "Part 2", "Part 5"],
+    roles: "Actor: Leader, Camera Operator",
+    summary: "Portrays the character of Leader, a key ally in the Ethachu series.",
+    extended: "Aaron Aultz brings a strong and supportive presence to the role of Leader, guiding Ethachu on his journey.",
+    videos: ["The End of Ethachu - Part 1", "The End of Ethachu - Part 2", "The End of Ethachu - Part 3"],
     image: "images/aaron.png"
     },
     {
     name: "Ammon Aultz",
     roles: "Actor: Random Fan / The Invincible Boy / Charizman",
-    summary: "Lends her voice to Lina, Ethachu’s loyal friend and companion.",
-    extended: "Ethachu is a curious and fearless young spirit, often found in the wilds seeking ancient truths.",
-    videos: ["Part 1", "Part 2", "Part 5"],
+    summary: "Ammon Aultz plays as the Invincible Boy, the son of The Invincible Man, who is determined to defeat Ethachu.",
+    extended: "Ammon Aultz portrays the Invincible Boy, the main villain of The End of Ethachu. He sneaks into the videogame world through Ethachu's car as Ethachu returns to regain his powers.",
+    videos: ["The End of Ethachu - Part 1", "The End of Ethachu - Part 2", "The End of Ethachu - Part 3"],
     image: "images/ammon.png"
     }
 ];
